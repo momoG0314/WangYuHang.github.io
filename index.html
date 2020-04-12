@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<title>p5.js template | index</title>
+
+	<!-- load style sheets -->
+	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<link rel="stylesheet" type="text/css" href="./css/landing.css">
+
+
+</head>
+
+<body>
+	<div class='container'>
+		<header>
+			<ul class='menu'>
+				<li><a href='./index.html'>index</a></li>
+				<li><a href='./fullscreen.html'>fullscreen</a></li>
+				<li><a href='./process.html'>process</a></li>
+				<li><a href='./gallery.html'>gallery</a></li>
+				<li><a href='./video.html'>video</a></li>
+			</ul>
+		</header>
+
+		<div id="landing">
+			<div class="overlay">
+				<h2>Degenerate Manner Tutorials</h2>
+			</div>
+			<span id="down">&#8595;</span>
+		</div>
+		<div id="project-info">
+			<h2>Project Description</h2>
+			<p>In this project, I want to use Visual to compose a series of scenes and compose series of pieces to express the visuals in a musical way. 
+            I am personally amazed by the lines and moving objects that can be created in P5.Js. My goal is to feed the audience with my visual and my music, at the same time I want to talk about my concept of music. It is a psychedelic journey, we all came from the same place and at the end we are going to the same place too, during the process of being, we will go through different stages of life. Appreciate what we experienced in this journey.For the series of visual, I using mostly colours and shapes that react with sound. Please enjoy.
+            Last but not least, thanks for Andi’s help, I guess I really love what I’m doing and I hope I could continue digging into this in the future. </p>
+			<p>Have a look at my <a href="https://www.tumblr.com/blog/yuhuh-universe" target="_blank">process log</a>, my <a href="https://editor.p5js.org/ChinaChipp/sketches" target="_blank">p5js sketches</a>, my Instagram <a href="https://www.instagram.com/nom8d/" target="_blank">nom8d</a>.
+			</p>
+			<p>My name is Yu Hang, I bend music and I twist sound, and this is the place where I puke visuals.</p>
+		</div>
+	</div>
+
+	<footer>
+		<p>A project by Yu Hang.<br />2020</p>
+	</footer>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		window.onbeforeunload = function() {
+			window.scrollTo(0, 0);
+		}
+
+		$(document).ready(function() {
+			$('#down').on('click', function() {
+				$("html").scrollTop(0);
+				$('html, body').animate({
+					scrollTop: $("#project-info").offset().top
+				}, 1000);
+			});
+		});
+	</script>
+</body></html>
